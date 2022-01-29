@@ -34,5 +34,15 @@ public class Enemy2 : MonoBehaviour
             //Destroy(effect, 5f);
         }
 
+        //if (collision.gameObject.layer == 10)
+        //{
+            //Add explosion effects later.
+            //GameObject effect = Instantiate(hit, transform.position, Quaternion.identity);
+
+           // causa dano
+           // Destroy(this.gameObject);
+            //Destroy(effect, 5f);
+        //}
+
     }
 }
