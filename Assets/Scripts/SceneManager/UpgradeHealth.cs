@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecoverHealth : MonoBehaviour
+public class UpgradeHealth : MonoBehaviour
 {
     private GameObject manager;
     private Health health;
-
 
     private void Start()
     {
@@ -16,9 +15,9 @@ public class RecoverHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 10)
         {
-            health.recoverHeart();
+            health.increaseHealthbar();
             //Efeitinho
             Destroy(this.gameObject);
         }

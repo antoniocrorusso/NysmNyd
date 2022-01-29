@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-
     [SerializeField]
-    [Header("SpawnRate")]
-    private float spawnRadius = 10, time = 30f;
+    [Header("SpawnRange")]
+    private float spawnRadiusX = 11, spawnRadiusY = 9, time = 1f;
+    private Vector3 size;
     
     private Score score;
     private int currentScore;
@@ -23,6 +23,7 @@ public class ItemSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        size = new Vector3(22, 18, 0f);
         scoreNeeded = new List<int>();
         score = this.gameObject.GetComponent<Score>();
         StartCoroutine(SpawnLifeRecover());
@@ -47,9 +48,12 @@ public class ItemSpawner : MonoBehaviour
 
     IEnumerator SpawnLifeRecover()
     {
-        Vector2 spawnPos = this.gameObject.transform.position;
-        spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
+        Vector3 origin = transform.position;
+        Vector3 randomRange = new Vector3(Random.Range(-spawnRadiusX, spawnRadiusX),
+                                          Random.Range(-spawnRadiusY, spawnRadiusY),
+                                          0);
 
+        Vector3 spawnPos = origin + randomRange;
         Instantiate(recoverHeart, spawnPos, Quaternion.identity);
         yield return new WaitForSeconds(time);
         StartCoroutine(SpawnLifeRecover());
@@ -66,9 +70,12 @@ public class ItemSpawner : MonoBehaviour
 
     void SpawnUpgrade()
     {
-        Vector2 spawnPos = this.gameObject.transform.position;
-        spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
+        Vector3 origin = transform.position;
+        Vector3 randomRange = new Vector3(Random.Range(-spawnRadiusX, spawnRadiusX),
+                                          Random.Range(-spawnRadiusY, spawnRadiusY),
+                                          0);
 
+        Vector3 spawnPos = origin + randomRange;
         Instantiate(upgradeBar, spawnPos, Quaternion.identity);
     }
 
@@ -76,6 +83,6 @@ public class ItemSpawner : MonoBehaviour
     {
         // Display the explosion radius when selected
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, spawnRadius);
+        Gizmos.DrawWireCube(transform.position, size);
     }
 }

@@ -11,12 +11,12 @@ public class CameraMov : MonoBehaviour
     public Transform light;
 
     private Transform target;
-    public Vector2 offset;
+    public Vector3 offset;
 
     [Range(1, 10)] public float smoothFactor;
 
-    public Vector2 minPosition;
-    public Vector2 maxPosition;
+    public Vector3 minPosition;
+    public Vector3 maxPosition;
 
 
     private void Start()
@@ -40,14 +40,15 @@ public class CameraMov : MonoBehaviour
             target = light;
         }
 
-        Vector2 tar = new Vector2(target.position.x, target.position.y);
-        Vector2 targetPosition = tar + offset;
+        Vector3 tar = new Vector3(target.position.x, target.position.y, -10f);
+        Vector3 targetPosition = tar + offset;
 
-        Vector2 bounds = new Vector2(
+        Vector3 bounds = new Vector3(
             Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x),
-            Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y));
+            Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y),
+            Mathf.Clamp(targetPosition.z, minPosition.z, maxPosition.z));
 
-        Vector2 Positioning = Vector2.Lerp(transform.position, bounds, smoothFactor * Time.fixedDeltaTime);
+        Vector3 Positioning = Vector3.Lerp(transform.position, bounds, smoothFactor * Time.fixedDeltaTime);
 
         transform.position = Positioning;
 

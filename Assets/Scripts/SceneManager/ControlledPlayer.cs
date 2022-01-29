@@ -4,25 +4,19 @@ using UnityEngine;
 
 public class ControlledPlayer : MonoBehaviour
 {
-    private int[] index;
-    private int value;
+    private int value = 1;
     public bool isPlayer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        int[] index = { 1, 2 };
-    }
 
-    public void setValue(int arrayNumber)
+    public void setValue(int number)
     {
-        value = index[arrayNumber];
+        value = number;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (value == 1)
+        if (value ==  1)
         {
             isPlayer = true;
         }
