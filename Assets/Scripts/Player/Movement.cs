@@ -12,6 +12,12 @@ public class Movement : MonoBehaviour
     Vector2 mov;
     Vector2 mouseTarget;
 
+    private ControlledPlayer controlled;
+
+    private void Start()
+    {
+        controlled = GameObject.FindGameObjectWithTag("Manager").GetComponent<ControlledPlayer>();
+    }
 
     void Update()
     {
@@ -22,6 +28,7 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            controlled.setValue(1);
             SwitchCharacter();
         }
     }

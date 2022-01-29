@@ -11,6 +11,12 @@ public class LightMovement : MonoBehaviour
 
     Vector2 mov;
 
+    private ControlledPlayer controlled;
+
+    private void Start()
+    {
+        controlled = GameObject.FindGameObjectWithTag("Manager").GetComponent<ControlledPlayer>();
+    }
 
     void Update()
     {
@@ -19,6 +25,7 @@ public class LightMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            controlled.setValue(0);
             SwitchCharacter();
         }
     }
