@@ -15,8 +15,8 @@ TagManager:
   - Player
   - Bullet
   - Enemy
-  - 
-  - 
+  - EnemyLight
+  - Light
   - 
   - 
   - 

@@ -26,13 +26,24 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 7)
+        if (collision.gameObject.layer == 10)
         {
             //Add explosion effects later.
             //GameObject effect = Instantiate(hit, transform.position, Quaternion.identity);
+
             Destroy(this.gameObject);
             //Destroy(effect, 5f);
         }
+
+        //if (collision.gameObject.layer == layer do player)
+       // {
+            //Add explosion effects later.
+            //GameObject effect = Instantiate(hit, transform.position, Quaternion.identity);
+
+            //causa dano
+            //Destroy(this.gameObject);
+            //Destroy(effect, 5f);
+       // }
 
     }
 }
