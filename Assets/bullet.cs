@@ -17,7 +17,7 @@ public class bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 8)
+        if(collision.gameObject.layer == 9)
         {
             //GameObject effect = Instantiate(hit, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
