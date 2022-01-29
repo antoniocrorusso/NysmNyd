@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\SceneManager\Health.cs" />
     <Compile Include="Assets\Scripts\Light\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\SceneManager\ItemSpawner.cs" />
+    <Compile Include="Assets\RecoverHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
