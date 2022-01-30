@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Health : MonoBehaviour
 {
@@ -17,6 +19,11 @@ public class Health : MonoBehaviour
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
+        }
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
 
         for (int i = 0; i < hearts.Length; i++)

@@ -7472,9 +7472,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Light
       objectReference: {fileID: 0}
+    - target: {fileID: 7312064800165270228, guid: 49f445691f3ea014f959b8cde4088a18, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce60aa53d0f476d4fbb9be6f4cdb19e2, type: 3}
     - target: {fileID: 7312064800165270229, guid: 49f445691f3ea014f959b8cde4088a18, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312064800165270229, guid: 49f445691f3ea014f959b8cde4088a18, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312064800165270229, guid: 49f445691f3ea014f959b8cde4088a18, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7312064800165270229, guid: 49f445691f3ea014f959b8cde4088a18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7518,7 +7530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7312064800165270231, guid: 49f445691f3ea014f959b8cde4088a18, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 0.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49f445691f3ea014f959b8cde4088a18, type: 3}
