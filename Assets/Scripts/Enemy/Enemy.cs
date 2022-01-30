@@ -54,4 +54,9 @@ public class Enemy : MonoBehaviour
        }
 
     }
+
+    public void setSpeed(float sp)
+    {
+        speed = sp;
+    }
 }

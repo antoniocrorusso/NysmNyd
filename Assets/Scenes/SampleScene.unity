@@ -342,9 +342,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRadius: 7
   time: 1.5
+  speed: 0.5
   enemies:
-  - {fileID: 8830461717981344236, guid: 5331fe7480896b94db050ddb62c30a0d, type: 3}
-  - {fileID: 5967483899719728811, guid: 283d9a4b28a87334abd0dc6c94fef99d, type: 3}
+  - {fileID: 864358874}
+  - {fileID: 1083298268}
 --- !u!4 &379363286
 Transform:
   m_ObjectHideFlags: 0
@@ -1296,6 +1297,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &864358874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8830461717981344236, guid: 5331fe7480896b94db050ddb62c30a0d, type: 3}
+  m_PrefabInstance: {fileID: 8830461718650166765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &875367480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1634,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018953118}
   m_CullTransparentMesh: 1
+--- !u!1 &1083298268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5967483899719728811, guid: 283d9a4b28a87334abd0dc6c94fef99d, type: 3}
+  m_PrefabInstance: {fileID: 5967483898339776174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129678387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1732,7 @@ MonoBehaviour:
   recoverHeart: {fileID: 2011448810720039732, guid: 98ccaaa8043caec4e90cd2b18a1f6b36, type: 3}
   upgradeBar: {fileID: 547479093249163125, guid: 368f9231af7519040b0e27365b553f6f, type: 3}
   baseScoreNumber: 50
+  enemySpawner: {fileID: 379363284}
 --- !u!114 &1129678392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7673,6 +7685,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1586101003407349799, guid: 283d9a4b28a87334abd0dc6c94fef99d, type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5967483899719728804, guid: 283d9a4b28a87334abd0dc6c94fef99d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -7720,6 +7736,10 @@ PrefabInstance:
     - target: {fileID: 5967483899719728811, guid: 283d9a4b28a87334abd0dc6c94fef99d, type: 3}
       propertyPath: m_Name
       value: EnemyLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967483899719728811, guid: 283d9a4b28a87334abd0dc6c94fef99d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283d9a4b28a87334abd0dc6c94fef99d, type: 3}
@@ -7823,9 +7843,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8830461717981344235, guid: 5331fe7480896b94db050ddb62c30a0d, type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8830461717981344236, guid: 5331fe7480896b94db050ddb62c30a0d, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830461717981344236, guid: 5331fe7480896b94db050ddb62c30a0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8830461717981344238, guid: 5331fe7480896b94db050ddb62c30a0d, type: 3}
       propertyPath: m_RootOrder

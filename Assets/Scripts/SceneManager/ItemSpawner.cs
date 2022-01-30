@@ -20,12 +20,17 @@ public class ItemSpawner : MonoBehaviour
     [Header("Base Number for Spawn Up")]
     public int baseScoreNumber;
 
+    [Header("Difficulty Increase")]
+    public GameObject enemySpawner;
+    private EnemySpawner spawn;
+
     // Start is called before the first frame update
     void Start()
     {
         size = new Vector3(22, 18, 0f);
         scoreNeeded = new List<int>();
         score = this.gameObject.GetComponent<Score>();
+        spawn = enemySpawner.GetComponent<EnemySpawner>();
         StartCoroutine(SpawnLifeRecover());
 
     }
@@ -39,6 +44,7 @@ public class ItemSpawner : MonoBehaviour
         {
             if (currentScore >= scoreNeeded[0])
             {
+                spawn.upSpeed();
                 SpawnUpgrade();
                 scoreNeeded.Remove(scoreNeeded[0]);
             }
