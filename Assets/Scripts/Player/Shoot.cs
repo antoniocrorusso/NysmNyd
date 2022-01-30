@@ -15,6 +15,7 @@ public class Shoot : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shooot();
+            GetComponent<AudioSource>().Play();
         }
     }
 
